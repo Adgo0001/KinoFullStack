@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login/Registre</title>
+    <link rel="stylesheet" href="/login_page.css">
+</head>
+<body>
+<div class="login-container">
+    <h2>Administrator Login</h2>
+    <form action="/admin_login_handler" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit" class="btn">Login</button>
+        <a href="/" class="back-btn">Back</a>
+    </form>
+</div>
+</body>
+</html>
