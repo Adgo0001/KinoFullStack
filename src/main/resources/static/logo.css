@@ -1,0 +1,15 @@
+/* Header with logo at the top left */
+header {
+    position: absolute;   /* Placer logoet absolut i forhold til vinduet */
+    top: 10px;            /* 10px fra toppen */
+    left: 10px;           /* 10px fra venstre */
+}
+
+/* Logo-styling */
+.logo {
+    width: 80px;          /* Øget størrelse på logoet */
+    height: 80px;
+    background: url('logo.png') no-repeat center/cover;
+    border-radius: 50%;   /* Gør logoet rundt */
+    margin: 0;            /* Fjern margin */
+}

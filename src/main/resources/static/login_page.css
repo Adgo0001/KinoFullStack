@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #111827, #1f2937);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Container */
+.login-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #555;
+    margin: 10px 0 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Button Styles */
+.btn {
+    background: #667eea;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #5563c1;
+}
+
+/* Styling for sign-up link */
+.sign-up-link {
+    color: #667eea;            /* Blå farve til linket */
+    font-weight: bold;         /* Gør teksten fed */
+    font-size: 16px;           /* Skru op for tekststørrelsen */
+    text-decoration: none;     /* Fjern understregning */
+    margin-top: 20px;          /* Øg afstand mellem knappen og linket */
+    transition: 0.3s ease;     /* Gør hover effekten glidende */
+}
+
+.sign-up-link:hover {
+    color: #5563c1;            /* Skift til en lidt mørkere blå ved hover */
+    text-decoration: underline;/* Understreg teksten ved hover */
+}
+
