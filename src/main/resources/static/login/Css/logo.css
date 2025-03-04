@@ -9,7 +9,7 @@ header {
 .logo {
     width: 80px;          /* Øget størrelse på logoet */
     height: 80px;
-    background: url('logo.png') no-repeat center/cover;
+    background: url('login/css for login/logo.png') no-repeat center/cover;
     border-radius: 50%;   /* Gør logoet rundt */
     margin: 0;            /* Fjern margin */
 }
