@@ -8,14 +8,22 @@ public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "movie_id")
+    private int id;
 
+    @Column(name = "title")
     private String title;
+
+    @Column(name = "genre")
     private String genre;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "Image_Path")
     private String posterUrl;
 
-    // Constructors
+    // Constructorsv
     public Movie() {}
 
     public Movie(String title, String genre, String description, String posterUrl) {
@@ -26,8 +34,8 @@ public class Movie {
     }
 
     // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
