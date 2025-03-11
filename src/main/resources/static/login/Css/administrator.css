@@ -1,22 +1,24 @@
 /* Generelle stilarter */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(180deg, #111827, #1f2937);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: #ffffff; /* Tailwind text-white */
 }
 
 /* Container til centreret layout */
 .container {
-    background: white;
+    background: #1f2937; /* Tailwind bg-gray-800 */
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 10px; /* Match radius with login_page.css */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 400px;
+    width: 100%;
+    max-width: 350px; /* Match max-width with login_page.css */
 }
 
 /* Header med logo og titel */
@@ -33,17 +35,17 @@ body {
     width: 100%;
     padding: 12px;
     margin: 8px 0;
-    border: 2px solid #667eea;
-    border-radius: 10px;
-    background: white;
+    border: 2px solid #ef4444; /* Tailwind focus:ring-red-500 */
+    border-radius: 5px; /* Match border-radius with login_page.css */
+    background: #1f2937; /* Tailwind bg-gray-800 */
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff; /* Tailwind text-white */
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .menu .menu-btn:hover {
-    background: #667eea;
+    background: #ef4444; /* Tailwind text-red-500 */
     color: white;
 }

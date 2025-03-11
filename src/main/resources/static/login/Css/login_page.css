@@ -7,11 +7,12 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: #ffffff; /* Tailwind text-white */
 }
 
-/* Login Container */
-.login-container {
-    background: #fff;
+/* Common Container Styles for both Login and Signup */
+.login-container, .signup-container {
+    background: #1f2937; /* Tailwind bg-gray-800 */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -22,7 +23,7 @@ body {
 
 h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #ffffff; /* Tailwind text-white */
 }
 
 /* Form Styles */
@@ -34,7 +35,7 @@ form {
 label {
     text-align: left;
     font-weight: bold;
-    color: #555;
+    color: #ffffff; /* Tailwind text-white */
     margin: 10px 0 5px;
 }
 
@@ -42,19 +43,20 @@ input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background: #374151; /* Tailwind bg-gray-700 */
     font-size: 14px;
     transition: 0.3s;
 }
 
 input:focus {
-    border-color: #667eea;
+    border-color: #ef4444; /* Tailwind focus:ring-red-500 */
     outline: none;
-    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.5); /* Tailwind focus:ring-red-500 */
 }
 
 /* Button Styles */
 .btn {
-    background: #667eea;
+    background: #ef4444; /* Tailwind text-red-500 */
     color: white;
     padding: 10px;
     border: none;
@@ -66,12 +68,12 @@ input:focus {
 }
 
 .btn:hover {
-    background: #5563c1;
+    background: #b91c1c; /* Tailwind hover:bg-red-700 */
 }
 
-/* Styling for sign-up link */
+/* Styling for sign-up link (used in login page) */
 .sign-up-link {
-    color: #667eea;            /* Blå farve til linket */
+    color: #ef4444;            /* Tailwind text-red-500 */
     font-weight: bold;         /* Gør teksten fed */
     font-size: 16px;           /* Skru op for tekststørrelsen */
     text-decoration: none;     /* Fjern understregning */
@@ -80,7 +82,6 @@ input:focus {
 }
 
 .sign-up-link:hover {
-    color: #5563c1;            /* Skift til en lidt mørkere blå ved hover */
+    color: #b91c1c;            /* Skift til en lidt mørkere rød ved hover */
     text-decoration: underline;/* Understreg teksten ved hover */
 }
-
