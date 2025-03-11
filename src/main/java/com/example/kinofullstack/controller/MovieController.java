@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/movies")
-@CrossOrigin(origins = "http://localhost:5500") // Adjust this if needed
+@CrossOrigin(origins = "*")
 public class MovieController {
 
     private final MovieRepository movieRepository;
@@ -29,6 +29,6 @@ public class MovieController {
     public ResponseEntity<Movie> getMovieById(@PathVariable Long id) {
         return movieRepository.findById(id)
                 .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build()); // Ensure proper 404 handling
+                .orElse(ResponseEntity.notFound().build());
     }
 }
