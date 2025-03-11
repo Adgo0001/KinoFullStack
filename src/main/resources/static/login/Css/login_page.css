@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #111827, #1f2937);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #ffffff; /* Tailwind text-white */
+}
+
+/* Common Container Styles for both Login and Signup */
+.login-container, .signup-container {
+    background: #1f2937; /* Tailwind bg-gray-800 */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ffffff; /* Tailwind text-white */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #ffffff; /* Tailwind text-white */
+    margin: 10px 0 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #374151; /* Tailwind bg-gray-700 */
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ef4444; /* Tailwind focus:ring-red-500 */
+    outline: none;
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.5); /* Tailwind focus:ring-red-500 */
+}
+
+/* Button Styles */
+.btn {
+    background: #ef4444; /* Tailwind text-red-500 */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #b91c1c; /* Tailwind hover:bg-red-700 */
+}
+
+/* Styling for sign-up link (used in login page) */
+.sign-up-link {
+    color: #ef4444;            /* Tailwind text-red-500 */
+    font-weight: bold;         /* Gør teksten fed */
+    font-size: 16px;           /* Skru op for tekststørrelsen */
+    text-decoration: none;     /* Fjern understregning */
+    margin-top: 20px;          /* Øg afstand mellem knappen og linket */
+    transition: 0.3s ease;     /* Gør hover effekten glidende */
+}
+
+.sign-up-link:hover {
+    color: #b91c1c;            /* Skift til en lidt mørkere rød ved hover */
+    text-decoration: underline;/* Understreg teksten ved hover */
+}
