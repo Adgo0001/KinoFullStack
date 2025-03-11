@@ -31,8 +31,6 @@ public class TicketController {
         this.reservationRepository = reservationRepository;
     }
 
-    // 🟢 1. Get all available shows
-
     @GetMapping
     public ResponseEntity<List<Map<String, Object>>> getAllShows() {
         List<Show> shows = showRepository.findAll();
@@ -57,29 +55,36 @@ public class TicketController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/theatres/{id}/seats")
-    public ResponseEntity<int[][]> getAvailableSeats(@PathVariable int id) {
-        Optional<Theatre> theatreOpt = theatreRepository.findById(id);
-        if (theatreOpt.isEmpty()) return ResponseEntity.notFound().build();
+    @GetMapping("/theatres/{theatreId}/shows/{showId}/seats")
+    public ResponseEntity<int[][]> getAvailableSeats(@PathVariable int theatreId, @PathVariable int showId) {
+        System.out.println("Received request for seats - theatreId: " + theatreId + ", showId: " + showId);
+
+        Optional<Theatre> theatreOpt = theatreRepository.findById(theatreId);
+        if (theatreOpt.isEmpty()) {
+            System.out.println("Theatre not found with ID: " + theatreId);
+            return ResponseEntity.notFound().build();
+        }
 
         Theatre theatre = theatreOpt.get();
         int rows = theatre.getRows();
         int seatsPerRow = theatre.getSeatsPerRow();
         int[][] seatLayout = new int[rows][seatsPerRow];
 
-        // Fetch occupied seats
-        List<Reservation> reservations = reservationRepository.findByShow_TheatreId(id);
+        List<Reservation> reservations = reservationRepository.findByShowId(showId);
         for (Reservation res : reservations) {
             res.getReservedSeats().forEach(seat -> {
-                // Check bounds to prevent array index out of bounds
+
                 if (seat.getRowNumber() < rows && seat.getSeatNumber() < seatsPerRow) {
                     seatLayout[seat.getRowNumber()][seat.getSeatNumber()] = 1;
                 }
             });
         }
 
+        System.out.println("Returning seat layout: " + Arrays.deepToString(seatLayout));
         return ResponseEntity.ok(seatLayout);
+
     }
+
 
     @PostMapping("/reservations")
     public ResponseEntity<String> bookTickets(@RequestBody Map<String, Object> request) {
@@ -113,4 +118,6 @@ public class TicketController {
             return ResponseEntity.status(500).body("Error booking ticket: " + e.getMessage());
         }
     }
+
+    //Du besværlig Alex
 }
