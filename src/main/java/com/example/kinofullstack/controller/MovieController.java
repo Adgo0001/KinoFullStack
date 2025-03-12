@@ -1,7 +1,7 @@
-package com.example.kinofullstack.controller;
+package com.example.kinofullstack.Controller;
 
-import com.example.kinofullstack.model.Movie;
-import com.example.kinofullstack.repository.MovieRepository;
+import com.example.kinofullstack.Model.Movie;
+import com.example.kinofullstack.Repository.MovieRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
