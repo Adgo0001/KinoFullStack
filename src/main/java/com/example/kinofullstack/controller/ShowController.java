@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/adrian")
+@RequestMapping("/api/shows2")
 @CrossOrigin(origins = "*")
 public class ShowController {
 
