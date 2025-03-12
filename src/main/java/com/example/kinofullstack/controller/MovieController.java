@@ -26,7 +26,7 @@ public class MovieController {
 
     // Fetch a single movie by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Movie> getMovieById(@PathVariable Long id) {
+    public ResponseEntity<Movie> getMovieById(@PathVariable Integer id) {
         return movieRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
