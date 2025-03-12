@@ -1,4 +1,4 @@
-package com.example.kinofullstack.model;
+package com.example.kinofullstack.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -13,6 +13,7 @@ public class Movie {
     @JsonProperty("id")
     private int movie_id;
 
+    @Column(name = "title")
     private String title;
 
     @Enumerated(EnumType.STRING)
