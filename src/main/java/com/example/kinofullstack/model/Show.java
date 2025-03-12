@@ -8,7 +8,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name = "shows")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "")
 public class Show {
 
     @Id
@@ -44,7 +44,7 @@ public class Show {
 
     public void setMovieId(int movieId) {
     }
-    
+
     public int getMovieId() {
         return movieId;
     }
