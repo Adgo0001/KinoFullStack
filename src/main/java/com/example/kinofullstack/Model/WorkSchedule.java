@@ -1,6 +1,5 @@
 package com.example.kinofullstack.Model;
 
-import com.example.kinofullstack.Model.Employee;
 import jakarta.persistence.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
